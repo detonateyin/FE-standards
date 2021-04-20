@@ -1,0 +1,41 @@
+{
+  "name": "FE-standards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js, vue}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/detonateyin/FE-standards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/detonateyin/FE-standards/issues"
+  },
+  "homepage": "https://github.com/detonateyin/FE-standards#readme",
+  "devDependencies": {
+    "commitizen": "^4.2.3",
+    "cz-customizable": "^6.3.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4"
+  }
+}
